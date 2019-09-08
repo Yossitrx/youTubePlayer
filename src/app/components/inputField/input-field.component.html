@@ -1,0 +1,18 @@
+<form class="form-container" (ngSubmit)="onFormSubmitted(stateCtrl.value)">
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Enter Video Id Or Name" [formControl]="stateCtrl"
+           [errorStateMatcher]="matcher">
+    <mat-error *ngIf="stateCtrl.hasError('required')">
+      This field is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <button class="add-btn" mat-raised-button>ADD</button>
+</form>
+
+<mat-slide-toggle
+  class="toggle-slide"
+  [checked]="toggleSuggestions.checked"
+  (change)="onToggleSuggestionsChange()"
+  [disabled]="toggleSuggestions.disabled">
+  For video suggestion slide me!
+</mat-slide-toggle>

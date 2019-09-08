@@ -1,0 +1,8 @@
+<mat-card class="note-tile-container" (click)="addSelectedVideoToList(note)">
+  <mat-card-header class="card-header">
+    <mat-card-title class="title">{{note.snippet.title}}</mat-card-title>
+    <div>
+      <img class="video-thumbnail" alt="thumbnail" [src]="note.snippet.thumbnails.default.url"/>
+    </div>
+  </mat-card-header>
+</mat-card>

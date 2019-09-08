@@ -1,0 +1,35 @@
+@import '../../commonCss/common';
+:host ::ng-deep {
+  .note-tile-container {
+    width: 106px;
+    height: 95px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 0 3px 0 $shadow;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover;
+    }
+  }
+
+  .video-thumbnail {
+    height: 80px;
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    .title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 18px;
+    }
+  }
+  @media (max-width: 558px) {
+    .note-tile-container {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

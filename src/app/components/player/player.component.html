@@ -1,0 +1,14 @@
+<h1 class="title">SimilarTube</h1>
+<div class="container" *ngIf="viewReady">
+  <div class="y-player" id="player"></div>
+  <div class="list">
+    <input-field (onToggleChange)="onToggleChange($event)"></input-field>
+    <div class="note-container">
+      <div class="note" *ngFor="let note of videoSuggestions$ | async">
+        <note-tile *ngIf="showSuggestions" [note]="note">
+        </note-tile>
+      </div>
+    </div>
+    <player-list [list]="list" (onListChange)="onListChange($event)"></player-list>
+  </div>
+</div>

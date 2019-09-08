@@ -1,0 +1,44 @@
+@import '../../commonCss/common';
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  color: $titleHeader;
+  padding: 10px;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-gap: 10px;
+  height: 90vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "list" "y-player";
+  grid-template-rows: 1fr;
+}
+
+.list {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.note-container {
+  display: flex;
+  .note {
+    padding: 10px;
+  }
+}
+
+.y-player {
+  grid-area: y-player;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
